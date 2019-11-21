@@ -1,0 +1,38 @@
+
+https://edu.goorm.io/learn/lecture/11528/git%EC%9C%BC%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EB%B0%8F-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/lesson/463719/git-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%9D%B5-%EA%B8%B0
+
+#   1.  GitHub 에 로그인 후 repository 생성
+#       AmadeusMK/Git-Learning 생성
+
+#   2.  https://git-scm.com/download/win
+#       윈도 설치파일 다운로드 후 설치
+
+#   3. cmd 창에서 확인
+
+#       버전확인
+
+        git --version
+
+#       전역설정 --global
+
+#   3-1. 계정 설정
+
+        git config --global user.name AmadeusMK
+
+#   3-2. 이메일 설정
+
+        git config --global user.email amadeusmk@gmail.com
+
+
+#   4.  저장소로 사용할 폴더 생성
+
+        mkdir d:\Git
+        d:
+        cd \Git
+
+#   5.  GitHub 와 clone
+#       D:\Git\Git-Learning 생성됨 ( 로컬 repository )
+
+        git clone https://github.com/AmadeusMK/Git-Learning.git
+
+#   6.  임의의 파일 생성
