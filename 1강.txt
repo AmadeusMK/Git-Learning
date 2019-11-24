@@ -1,6 +1,8 @@
 
 https://edu.goorm.io/learn/lecture/11528/git%EC%9C%BC%EB%A1%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-%ED%98%91%EC%97%85-%EB%B0%8F-%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/lesson/463719/git-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%82%AC%EC%9A%A9%EB%B2%95-%EC%9D%B5-%EA%B8%B0
 
+https://ndb796.tistory.com/184?category=1029186
+
 #   1.  GitHub 에 로그인 후 repository 생성
 #       AmadeusMK/Git-Learning 생성
 
@@ -35,4 +37,73 @@ https://edu.goorm.io/learn/lecture/11528/git%EC%9C%BC%EB%A1%9C-%EC%8B%9C%EC%9E%9
 
         git clone https://github.com/AmadeusMK/Git-Learning.git
 
-#   6.  임의의 파일 생성
+#   6.  로컬 repository 에서 파일 생성
+
+        cd Git-Learning
+
+        D:\Git\Git-Learning\1강.txt
+
+#   7.  파일 추가 및 commit
+#       커밋시 메시지 추가 ( -m 옵션 )
+#       로컬 repository 에만 적용 되며, 원격 repository 는 push 로 적용 함
+
+        git add 1강.txt
+        git commit -m "Add Text File[1강.txt]"
+
+#   8.  원격 repository 에 push
+#       ( 로그인 창이 팝업 될 수 있음 )
+
+        git push
+
+----------
+
+#   1.  다운로드 ( clone )
+
+        git clone https://github.com/AmadeusMK/Git-Learning.git
+
+#   ex) my_module.py 파일 추가한 후 진행
+
+#   2.  변경 확인
+
+        git status
+
+#   3.  추가한 파일을 staging area 에 추가
+#       ( staging area 에 있는 파일만 커밋 가능 )
+
+        git add my_module.py
+
+        or
+
+        git add .       ( 모든 파일 추가 )
+
+
+#       reset 명령으로 staging area 에서 제외 가능
+
+        git reset my_module.py
+
+#   4.  commit 및 push
+
+        git commit -m "Add my_module.py [Add]"
+
+        git push
+
+
+#   5.  파일 수정 후 적용 
+#       or checkout 은 이전 파일로 변경
+
+        git status      ( 상태 확인 )
+
+        git checkout -- my_module.py
+
+
+
+
+
+
+
+
+
+
+
+
+
