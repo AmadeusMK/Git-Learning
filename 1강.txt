@@ -93,8 +93,13 @@ https://ndb796.tistory.com/184?category=1029186
 
         git status      ( 상태 확인 )
 
-        git checkout -- my_module.py
+        git checkout -- my_module.py    ( 수정 취소 )
 
+        git commit -m "Add my_module [Sub]"
+
+#       커밋 메시지 수정
+
+        git commit --amend 
 
 
 
