@@ -108,7 +108,30 @@ https://ndb796.tistory.com/184?category=1029186
 ----------------------------------------------------------------------------------------------------
 
 
-#   
+#   1.  git clone 후 git pull
+
+
+#   2.  파일 수정 및 push
+
+        git add .                       수정내용을 Staging Aread 에 올림
+        git commit -m "Rename File"     commit
+        git status                      상태 확인
+
+D:\Git\Git-Learning>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.    <- 1개의 커밋이 발생했음
+  (use "git push" to publish your local commits)        <- 아직 push 는 하지 않음
+
+nothing to commit, working tree clean
+
+        git push
+
+
+#   3.  git log
+
+
+
+
 
 
 
