@@ -119,32 +119,66 @@ https://ndb796.tistory.com/184?category=1029186
 
 D:\Git\Git-Learning>git status
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.    <- 1개의 커밋이 발생했음
-  (use "git push" to publish your local commits)        <- 아직 push 는 하지 않음
+Your branch is ahead of 'origin/master' by 1 commit.    <=  1개의 커밋이 발생했음
+  (use "git push" to publish your local commits)        <=  아직 push 는 하지 않음
 
 nothing to commit, working tree clean
 
+        git push                        서버로 push
+
+
+#   3.  이력 확인(log) 및 이전 지점으로 돌아감(reset)
+
+        git log
+
+            한 페이지가 넘을 경우
+            스페이스 : 한 페이지 단위로 계속 조회
+            p : 이전 페이지 
+            q : 종료
+
+commit ec6c5abc0fe7bd347d8b56d94ab05f6e7a743802         <=  
+Author: AmadeusMK <amadeusmk@gmail.com>
+Date:   Wed Dec 11 01:46:16 2019 +0900
+
+    <EB><82><B4><EC><9A><A9> <EC><B6><94><EA><B0><80>   <=  커밋시에 붙인 메시지
+
+
+        git reset --hard ec6c5abc0fe7bd347d8b56d94ab05f6e7a743802
+
+            --hard 옵션 : 해당 커밋 지점으로 돌아가고, 나머지는 무시
+            --soft / --mixed 옵션 존재
+
+            로컬 저장소만 변경 되고, github 저장소는 변경되지 않음
+
+        git push        <=  오류 발생 함
+
+        git push -f     <=  강제로 push. github 저장소도 변경 됨
+
+#   4.  commit 메시지 수정
+
+        git commit --amend
+
+            vi 에디트 실행 됨
+
+        git status
+        git log         <=  메시지 변경 확인
+
+        git push -f     <=  오류가 나서... 강제로 커밋
+
+        커밋 이후, 파일은 수정 했는데, 다시 커밋은 하지 않고, 
+        메시지만 변경하고, push 함... 
+        github 확인시 파일과 커밋메시지 내용이 맞지 않음...
+
+        커밋 메시지를 다시 변경하고, 그대로 push -f 해서 파일 변경내용과 맞춤
+
+        git commit --amend
+        git push -f     <=  오류가 나서... 강제로 커밋
+
+        이 후, 다시 add 및 commit 과 적당한 메시지 입력 후 push 함
+
+        git add .
+        git commit -m "Add my_module [Sun & Mul]"
         git push
-
-
-#   3.  git log
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ----------------------------------------------------------------------------------------------------
