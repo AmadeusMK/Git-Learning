@@ -8,4 +8,4 @@ def mul( a, b ):
     return a * b
 
 def div( a, b ):
-    return a / b
+    return a // b   #   나누기는 연산자가 다르나...?
