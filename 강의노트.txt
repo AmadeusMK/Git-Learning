@@ -183,6 +183,37 @@ Date:   Wed Dec 11 01:46:16 2019 +0900
 
 ----------------------------------------------------------------------------------------------------
 
+#   브랜치
+
+    통합 브랜치 : 프로젝트 생성시 기본적으로 master 브랜치가 생성
+                  배포가 가능한 안정화 버전
+
+    토픽 브랜치 : 특정 기능을 위해 만들어진 브랜치
+                  Develop / Bug Fix branch
+
+    1.  브랜치 확인. 
+
+        git branch
+
+        현재는 master 만 존재 ( "*" 표시 )
+
+    2.  브랜치 생성. ex) develop 브랜치
+
+        git branch develop
+
+        develop 브랜치 생성 확인
+
+        git branch
+
+    3.  develop 브랜치로 헤더 이동
+
+        git checkout develop
+
+    4.  소스 수정 후 commit
+
+        git add .
+        git commit -m "Add function to my_module.py"
+
 
 
 
