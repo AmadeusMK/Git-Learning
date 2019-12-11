@@ -195,13 +195,13 @@ Date:   Wed Dec 11 01:46:16 2019 +0900
 
         git branch
 
-        현재는 master 만 존재 ( "*" 표시 )
+            현재는 master 만 존재 ( "*" 표시 )
 
     2.  브랜치 생성. ex) develop 브랜치
 
         git branch develop
 
-        develop 브랜치 생성 확인
+            develop 브랜치 생성 확인
 
         git branch
 
@@ -213,6 +213,20 @@ Date:   Wed Dec 11 01:46:16 2019 +0900
 
         git add .
         git commit -m "Add function to my_module.py"
+
+        git log
+
+            브랜치로 커밋 확인
+
+    5.  master 브랜치로 돌아가서 merge 함
+
+        git checkout master
+
+        git merge develop
+
+            develop 브랜치를 master 에 merge
+
+
 
 
 
