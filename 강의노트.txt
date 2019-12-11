@@ -191,6 +191,7 @@ Date:   Wed Dec 11 01:46:16 2019 +0900
     토픽 브랜치 : 특정 기능을 위해 만들어진 브랜치
                   Develop / Bug Fix branch
 
+
     1.  브랜치 확인. 
 
         git branch
@@ -219,6 +220,7 @@ Date:   Wed Dec 11 01:46:16 2019 +0900
             브랜치로 커밋 확인
 
     5.  master 브랜치로 돌아가서 merge 함
+        ( 로컬에서만 작업 )
 
         git checkout master
 
@@ -226,12 +228,107 @@ Date:   Wed Dec 11 01:46:16 2019 +0900
 
             develop 브랜치를 master 에 merge
 
+    6.  github 에 push 반영
 
+        git push
 
+    7.  develop 브랜치는 필요 없음으로 제거
 
+        git branch -d develop
+
+        git branch
+
+            develop 브랜치가 삭제된것을 확인 함
 
 
 ----------------------------------------------------------------------------------------------------
+
+#   conflict 처리
+
+    1.  develop 브랜치 생성 및 헤더 이동
+
+        git branch develop
+        git checkout develop
+
+        소스 수정 및 커밋
+
+        git add .
+        git commit -m "Add my_module.py [Div]"
+        git log
+
+        master 브랜치로 헤더 이동 후 같은 소스 다르게 수정 및 커밋
+
+        git checkout master
+
+        git add .
+        git commit -m "Add my_module.py [Div] & Comment"
+        git log
+
+        각각의 브랜치에서 git log 확인시 로그가 서로 다름을 확인
+
+    2.  master 브랜치에서 merge 실행시 conflict 발생 확인
+        ( Automatic merge failed; ... )
+
+        git merge develop
+
+        충돌난 소스 확인시 HEAD (master) 와 develop 의 다른 부분 표시 됨
+        필요한 부분 찾아서 수정 후 add 및 commit ( 병합이 완료 됨 )
+
+        git add .
+        git commit -m "Add my_module.py [Div] & Comment"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
