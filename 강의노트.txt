@@ -16,16 +16,26 @@ https://ndb796.tistory.com/184?category=1029186
 
         git --version
 
+#       설정확인
+
+        git config --list
+
 #       전역설정 --global
+
+        --global 을 붙이지 않으면 특정 프로젝트에서만 사용할 설정이 됨
+        이경우 해당 설정이 우선 적용 됨
 
 #   3-1. 계정 설정
 
-        git config --global user.name AmadeusMK
+        git config --global user.name "AmadeusMK"
 
 #   3-2. 이메일 설정
 
-        git config --global user.email amadeusmk@gmail.com
+        git config --global user.email "amadeusmk@gmail.com"
 
+#   3-3. 기본(?) 에디터 설정
+
+        git config --global core.editor vi
 
 #   4.  저장소로 사용할 폴더 생성
 
@@ -163,7 +173,7 @@ Date:   Wed Dec 11 01:46:16 2019 +0900
         git status
         git log         <=  메시지 변경 확인
 
-        git push -f     <=  오류가 나서... 강제로 커밋
+        git push -f     <=  오류가 나서... 강제로 push
 
         커밋 이후, 파일은 수정 했는데, 다시 커밋은 하지 않고, 
         메시지만 변경하고, push 함... 
